@@ -1,0 +1,18 @@
+K -> S P | S P Pel | S P Ket | S P Pel Ket
+S -> NP | Num VP
+P -> VP
+Ket -> PP | PP Ket
+PP -> Prep NP | Prep Pronoun | Prep PropNoun | Prep Adj | Prep AdjP
+AdjP -> Adv AdjP | Adj
+NP -> NP Pronoun | Noun NP | Noun | NP PropNoun | NP Verb | Num NP | Pronoun | Pronoun Num | PropNoun
+VP -> Adv Verb | Verb | Prep Verb
+Pel -> NP | AdjP | Num | PP | VerbPel NP | VerbPel PP
+Num -> dua | semua
+Adv -> sudah | sedang | sering | akan | ingin | selalu | mulai | sendiri | sangat
+VerbPel -> menjadi | bergantung
+Verb -> membaik | membusuk | menyapu | bermain | mencangkul | mandi | menyetir | menangis | memasak | memotret | menyemir | berenang | berbelanja | terkejut | tidur | makan | terjebak | berjualan | berhutang | menjadi | terkenal | cukur | terlentang | jatuh | bersenjatakan | berdiri | kedapatan | berlari | berwarna | bernilai | belajar | berangkat | bertepuk | berebut | bercita-cita | menjadi | berbaju | beristri | bergantung | berfikir | mengatakan | melakukan | menghabiskan | berlaku | sesuai | rindu | meminta | bergantung | berfikir
+Noun -> keadaan | apel | sepatu | pistol | bola | angkot | piano | adik | kakak | anak | kamar | pagi | halaman | rumah | sawah | sekolah | kantin | pasar | siang | pantai | toko | sepatu | aktris | tetangga | polisi | guru | kelas | depan | alat | sepak | bola | angkot | merah | pesawat | matematika | sebelah | tangan | antrian | pilot | biru | piano | pembangunan | mentalitas | pekerjanya | hal | perintah | waktu | hukuman | undang-undang | maaf | ayah | ayahnya | masalah
+Pronoun -> saya | aku | kau | kita | itu | pak | kami | anda | ini
+Prep -> di | pada | kepada | dengan | tentang | tadi | bersama | dari
+PropNoun -> Dimas | Rangga | Tika | Alex | Budi | Matthew | Dito | Agus | Klungkung | Rizki | Kuta | Eka | Derah | Nina | Udel | Andi | Rahman | Madya | Albert | Nita
+Adj -> mahal

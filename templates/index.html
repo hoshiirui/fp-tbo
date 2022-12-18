@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home - FP TBO Kelompok 2A</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <meta property="og:title" content="Grizzled Misty Locust" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Marcellus:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&amp;display=swap"
+      data-tag="font"
+    />
+    <!--This is the head section-->
+    <!-- <style> ... </style> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+  </head>
+  <body>
+    <div>
+      <link href="{{ url_for('static', filename='styles/home.css') }}" rel="stylesheet" />
+
+      <div class="home-container">
+        <div class="home-container01">
+          <header data-thq="thq-navbar" class="home-navbar-interactive">
+            <img
+              alt="logo"
+              src="{{ url_for('static', filename='images/logo-200h.png') }}"
+              class="home-logo"
+            />
+            <div
+              data-thq="thq-navbar-nav"
+              data-role="Nav"
+              class="home-desktop-menu"
+            >
+              <nav
+                data-thq="thq-navbar-nav-links"
+                data-role="Nav"
+                class="home-nav"
+              >
+                <a href="/"><span id="homenav" class="home-text">HOME</span></a>
+                <a href="/app"><span id="appnav" class="home-text01">APP</span></a>
+              </nav>
+            </div>
+            <div data-thq="thq-burger-menu" class="home-burger-menu">
+              <svg viewBox="0 0 1024 1024" class="home-icon">
+                <path
+                  d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                ></path>
+              </svg>
+            </div>
+          </header>
+        </div>
+        <div class="home-container04">
+          <img
+            alt="image"
+            src="{{ url_for('static', filename='images/title-300h.png') }}"
+            class="home-image01"
+          />
+        </div>
+        <h1 class="home-text07">INTRODUCTION</h1>
+        <div class="home-container05">
+          <img
+            alt="image"
+            src="{{ url_for('static', filename='images/bro-400h.png') }}"
+            class="home-image02"
+          />
+          <span class="home-text08">
+            <span>
+              CFG (Context Free Grammar) merupakan tata bahasa yang diciptakan
+              secara bebas-konteks dan digunakan untuk formalisasi suatu bahasa
+              baik bahasa alami maupun bahasa pemrograman. Dengan pendekatan
+              formal ini, kompiler dari suatu bahasa pemrograman dapat dibuat
+              dengan tingkat kesulitan yang rendah dan menghindari ambiguitas
+              ketika akan diparsing bahasa tersebut. Proses pembacaan string
+              dalam bahasa sesuai CFG tertentu, dan harus mematuhi aturan
+              produksi dalam CFG tersebut disebut dengan proses parsing.
+            </span>
+            <br />
+            <br />
+            <span>
+              Set of Rules merupakan salah satu dari bagian CFG yang digunakan
+              untuk mengganti simbol non-terminal (di sisi kiri production)
+              dalam string dengan simbol terminal atau non-terminal lain (di
+              sisi kanan production).
+            </span>
+          </span>
+        </div>
+        
+        <h1 class="home-text19">OUR MEMBER</h1>
+        <div class="home-container07">
+          <div class="home-container08">
+            <img
+              src="{{ url_for('static', filename='images/group.png') }}"
+              alt="image"
+              class="home-image05"
+            />
+            <span class="home-text20">RANGGA (2108561050)</span>
+          </div>
+          <div class="home-container09">
+            <img
+              src="{{ url_for('static', filename='images/group.png') }}"
+              alt="image"
+              class="home-image06"
+            />
+            <span class="home-text21">NANDA (2108561001)</span>
+          </div>
+        </div>
+        <div class="home-container10">
+          <div class="home-container11">
+            <img
+              src="{{ url_for('static', filename='images/group.png') }}"
+              alt="image"
+              class="home-image07"
+            />
+            <span class="home-text22">ARSA (2108561116)</span>
+          </div>
+          <div class="home-container12">
+            <img
+              src="{{ url_for('static', filename='images/group.png') }}"
+              alt="image"
+              class="home-image08"
+            />
+            <span class="home-text23">SUCI (2108561011)</span>
+          </div>
+        </div>
+        <div class="home-container13">
+          <div class="home-container14">
+            <img
+              src="{{ url_for('static', filename='images/group.png') }}"
+              alt="image"
+              class="home-image09"
+            />
+            <span class="home-text24">HANGGARA (1908561083)</span>
+          </div>
+        </div>
+        <div class="home-container15">
+          <div class="home-container16">
+            <span class="home-text25">
+              <span>Let's Parse Your Sentence</span>
+              <br />
+              <span>Now!</span>
+            </span>
+            <a href="/app"><button
+              id="gotoapp"
+              name="gotoapp"
+              
+              type="button"
+              class="home-button button"
+            >
+              Go to App
+            </button></a>
+          </div>
+          <img
+            src="{{ url_for('static', filename='images/bro1-500w.png') }}"
+            alt="image"
+            class="home-image10"
+          />
+        </div>
+        <div class="home-container06">
+            <img
+              alt="image"
+              src="{{ url_for('static', filename='images/quote1.png') }}"
+              class="home-image03"
+            />
+            <span class="home-text13">
+              <span class="home-text14">
+                As more and more artificial intelligence is entering into the
+                world, more and more emotional intelligence must enter into
+              </span>
+              <span class="home-text15">leadership</span>
+              <br class="home-text16" />
+              <span class="home-text17">- Amit Ray, Famous AI Scientist</span>
+              <br />
+            </span>
+            <img
+              alt="image"
+              src="{{ url_for('static', filename='images/quote2.png') }}"
+              class="home-image04"
+            />
+          </div>
+      </div>
+    </div>
+    <script
+      data-section-id="navbar"
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>App - FP TBO Kelompok 2A</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <meta property="og:title" content="App - Grizzled Misty Locust" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Marcellus:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&amp;display=swap"
+      data-tag="font"
+    />
+    <!--This is the head section-->
+    <!-- <style> ... </style> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+  </head>
+  <body>
+    <div>
+      <link href="{{ url_for('static', filename='styles/app.css') }}" rel="stylesheet" />
+      <link href="{{ url_for('static', filename='styles/home.css') }}" rel="stylesheet" />
+
+      <div class="app-container">
+        <div class="app-container1">
+          <header data-thq="thq-navbar" class="home-navbar-interactive">
+            <img
+              alt="logo"
+              src="{{ url_for('static', filename='images/logo-200h.png') }}"
+              class="home-logo"
+            />
+            <div
+              data-thq="thq-navbar-nav"
+              data-role="Nav"
+              class="home-desktop-menu"
+            >
+              <nav
+                data-thq="thq-navbar-nav-links"
+                data-role="Nav"
+                class="home-nav"
+              >
+                <a href="/"><span id="homenav" class="home-text01">HOME</span></a>
+                <a href="/app"><span id="appnav" class="home-text">APP</span></a>
+              </nav>
+            </div>
+            <div data-thq="thq-burger-menu" class="home-burger-menu">
+              <svg viewBox="0 0 1024 1024" class="home-icon">
+                <path
+                  d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                ></path>
+              </svg>
+            </div>
+          </header>
+        </div>
+        <div class="app-container4">
+          <img
+            alt="image"
+            src="{{ url_for('static', filename='images/title-300h.png') }}"
+            class="app-image1"
+          />
+        </div>
+        <h1 class="app-text7">SENTENCE PARSING</h1>
+        <div class="app-container5">
+
+          <form id="parseinput" action="/app" method="POST">
+            <input
+              type="text"
+              placeholder="Masukkan kalimat"
+              id="sentenceinput"
+              name="sentenceinput"
+              class="app-textinput input"
+            />
+          </form>
+            <button id="parse" name="parse" autofocus="" class="app-button button" type="submit", form="parseinput">Parse</button>
+        </div>
+            {% if submit %}
+            <h1 class="app-text08">RESULT</h1>
+            <span class="app-text09">
+              <span>Berdasarkan algoritma, string "{{string}}"</span>
+              <br />
+              <span>dinyatakan:</span>
+              <br />
+            </span>
+            <div class="app-container6">
+              <img
+                src="{{ url_for('static', filename='images/left-200h.png') }}"
+                alt="image"
+                class="app-image2"
+              />
+              <span class="app-text14">{{result}}</span>
+              <img
+                src="{{ url_for('static', filename='images/right-200h.png') }}"
+                alt="image"
+                class="app-image3"
+              />
+            </div>
+            {% endif %}
+            <div class="home-container06" style="margin-top:176px">
+              <img
+                alt="image"
+                src="{{ url_for('static', filename='images/quote1.png') }}"
+                class="home-image03"
+              />
+              <span class="home-text13">
+                <span class="home-text14">
+                  As more and more artificial intelligence is entering into the
+                  world, more and more emotional intelligence must enter into
+                </span>
+                <span class="home-text15">leadership</span>
+                <br class="home-text16" />
+                <span class="home-text17">- Amit Ray, Famous AI Scientist</span>
+                <br />
+              </span>
+              <img
+                alt="image"
+                src="{{ url_for('static', filename='images/quote2.png') }}"
+                class="home-image04"
+              />
+            </div>
+
+        
+      </div>
+    </div>
+    <script
+      data-section-id="navbar"
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
+</html>
