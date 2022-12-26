@@ -6,7 +6,7 @@ Ket  -> NP | VP | PP
 Pel -> NP | VP | PP | AdjP
 NP -> NP Noun | NP PropNoun | NP Pronoun | NP Verb | NP Adj | Num NP | NP Adv12 | Adv11 NP | Noun | Pronoun | PropNoun
 VP -> AAdv9 VP | VP Adv8 | VP Adj | Adv10 | VP Noun | Verb NP | Verb
-PP -> Prep Adj | Prep NP | Prep Adv12 | Prep VP 
+PP -> Prep Adj | Prep NP | Prep Adv12 | Prep VP
 AdjP -> AdjP Adj | Adv13 AdjP | Adj
 Adv1 -> hendak | dapat | bisa | boleh | suka | ingin | mau
 Adv2 -> akan
