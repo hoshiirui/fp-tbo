@@ -15,7 +15,7 @@ def configure_routes(app):
     def app():
         if (request.method == "POST"):
             string = request.form["sentenceinput"]
-            result = cyk.is_accepted(string)
+            result = cyk.getValid(string)
             return render_template("app.html", result=result, submit=True, string=string)
         else:
             return render_template("app.html", submit=False)
