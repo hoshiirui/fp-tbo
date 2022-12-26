@@ -38,9 +38,9 @@ def is_accepted(inputString):
                             resultList.append(key)
                 TRIANGULAR_TABLE[(j,j+len(inputString) - i)] = resultList
     if "K" in TRIANGULAR_TABLE[(1, len(inputString))]:
-        return True
+        return "Valid"
     else:
-        return False
+        return "Tidak Valid"
 
 print(is_accepted("Alex bercita-cita menjadi pilot"))
 #print(TRIANGULAR_TABLE)
