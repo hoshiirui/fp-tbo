@@ -1,4 +1,4 @@
-from modules.cnf import *
+from modules.cnf import setOfProduction
 
 tabelsegitiga = {}
 g = None
