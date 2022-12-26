@@ -58,6 +58,6 @@ def getTable(inputString):
     result.append(inputString.split(" "))
     return result
 
-print(getValid("Alex bercita-cita menjadi pilot"))
-print(*getTable("Alex bercita-cita menjadi pilot"), sep="\n")
+#print(getValid("Alex bercita-cita menjadi pilot"))
+#print(*getTable("Alex bercita-cita menjadi pilot"), sep="\n")
 #print(TRIANGULAR_TABLE)
