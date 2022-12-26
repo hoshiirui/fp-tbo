@@ -1,4 +1,4 @@
-import modules.cnf
+from modules.cnf import *
 
 tabelsegitiga = {}
 g = None
@@ -7,7 +7,7 @@ previousNode = None
 def getValid(inputString):
     global tabelsegitiga
     tabelsegitiga.clear()
-    prodRules = cnf.setOfProduction()
+    prodRules = setOfProduction()
     temp = inputString.lower().split(" ")
     inputString = temp
     for i in range(1,len(inputString)+1):
