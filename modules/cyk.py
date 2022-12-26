@@ -38,9 +38,9 @@ def getValid(inputString):
                             resultList.append(key)
                 tabelsegitiga[(j,j+len(inputString) - i)] = resultList
     if "K" in tabelsegitiga[(1, len(inputString))]:
-        return True
+        return "Valid"
     else:
-        return False
+        return "Tidak Valid"
 
 def getTable(inputString):
     global tabelsegitiga
