@@ -11,7 +11,7 @@ P -> PP | VP | AdjP
 O -> NP
 Pel -> NP | VP | AdjP | PP
 Ket -> PP | NP | NumP | AdjP
-NP -> PropNoun | Pronoun | Noun | NP AdjP | NumP NP | NP Noun | NP PropNoun | NP Pronoun | NP Verb
+NP -> PropNoun | Pronoun | Noun | NP AdjP | NumP NP | NP Noun | NP PropNoun | NP Pronoun
 VP -> Verb | AdvP VP
 PP -> Prep NP | Prep AdvP | Prep AdjP | Prep VP
 AdjP -> Adj | Adv AdjP
